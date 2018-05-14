@@ -1,0 +1,5 @@
+encryption-playground.exe
+*.json
+!inp*.json
+!out01.json
+!out02.json

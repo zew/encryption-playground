@@ -1,0 +1,25 @@
+{
+ 	"prime_1": 59,
+ 	"prime_2": 23,
+ 	"p": 1357,
+ 	"p_decremented": 1276,
+ 	"exp_private": 775,
+ 	"exp_public": 163,
+ 	"plain_text": "Oma",
+ 	"plain_ints": [
+ 		79,
+ 		109,
+ 		97
+ 	],
+ 	"cypher": [
+ 		1192,
+ 		1332,
+ 		1308
+ 	],
+ 	"decr_ints": [
+ 		79,
+ 		109,
+ 		97
+ 	],
+ 	"decr_text": "Oma"
+ }
