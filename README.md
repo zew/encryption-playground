@@ -1,5 +1,4 @@
-# Encryption Playground 
-
+# Encryption Playground
 
 * See `private-public-key-and-diffie-hellmann.ods` for illustration.  
 
@@ -8,7 +7,6 @@
 * Primitive setup to find a divider and two corresponding numbers as public and private key.
 
 * Uses golang math/big to process huge numbers.
-
 
 ## Implementation in Go
 
@@ -19,8 +17,8 @@
 * It chooses a random number as public key (does it have to be prime?)
 
 * It then searched for a corresponding private key, so that 
-    
-    (pub*priv) % modified_divider == 1 
+
+    (pub*priv) % modified_divider == 1
 
 ## Encrypt - decrypt
 
@@ -30,10 +28,7 @@
 
 * Results are saved to out.json
 
-
 ## Beware of amateur details
 
 * The search for a related private key is deterministic  
  and does not scale.
-
-

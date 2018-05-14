@@ -10,6 +10,7 @@ import (
 	"github.com/zew/util"
 )
 
+// Load a Set from JSON file
 func Load(fn ...string) *Set {
 
 	setFile := "inp.json"
@@ -35,6 +36,7 @@ func Load(fn ...string) *Set {
 	return &tmpSet
 }
 
+// Save a Set to JSON file
 func (s *Set) Save(fn ...string) error {
 
 	firstColLeftMostPrefix := " "

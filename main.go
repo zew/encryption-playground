@@ -10,6 +10,10 @@ import (
 	"github.com/zew/util"
 )
 
+// Type Set contains a set of numbers for encryption and decryption.
+// Plain... and Cypher... contain the results of the most
+// recent encryption and decrytion operation.
+// Type Set can be loaded from and saved to JSON
 type Set struct {
 	Pri1 *big.Int `json:"prime_1,omitempty"` // A helper prime
 	Pri2 *big.Int `json:"prime_2,omitempty"` // A helper prime
@@ -30,6 +34,9 @@ type Set struct {
 	Decrpyted     string     `json:"decr_text,omitempty"`
 }
 
+// Init sets up the divider and the private and public key.
+// Init returns true, if the numbers could be established.
+// After successful init, the Set can be used to encrypt and decrypt.
 func (s *Set) Init() bool {
 	s.P = big.NewInt(0)
 	s.P.Mul(s.Pri1, s.Pri2)
@@ -128,8 +135,6 @@ func main() {
 		s1.PlainInts = append(s1.PlainInts, big.NewInt(int64(char)))
 	}
 	s1.Cypher = s1.Encrypt(s1.PlainInts)
-	// log.Printf("%v", util.IndentedDump(s1))
-	// log.Printf("%v", util.IndentedDump(s1.Cypher))
 
 	s1.DecryptedInts = s1.Decrypt(s1.Cypher)
 	x := []byte{}
